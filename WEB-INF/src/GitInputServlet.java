@@ -13,14 +13,14 @@ public class GitInputServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // レスポンスヘッダーの設定
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
+            request.setCharacterEncoding("UTF-8");
 
         // 自分の名前
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
 
-
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
 
         // レスポンスのメッセージボディにHTMLを出力
         PrintWriter out = response.getWriter();
@@ -30,7 +30,8 @@ public class GitInputServlet extends HttpServlet {
         out.println("<title>My Name</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>My name is " + name + "</h1>");
+        out.println("<h1>My name is " +firstName+ "</h1>");
+        out.println("<h1>My name is " +lastName+ "</h1>");
         out.println("</body>");
         out.println("</html>");
     }
