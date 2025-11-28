@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <!-- サーブレットの登録 -->
+    <servlet>
+        <servlet-name>bye</servlet-name>
+        <servlet-class>ByeByeServlet</servlet-class>
+    </servlet>
+
+    <!-- サーブレットのURLマッピング -->
+    <servlet-mapping>
+        <servlet-name>bye</servlet-name>
+        <url-pattern>/byebye</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GitInputServlet</servlet-name>
+        <servlet-class>GitInputServlet</servlet-class>
+    </servlet>
+
+    <!-- サーブレットのURLマッピング -->
+    <servlet-mapping>
+        <servlet-name>gitinput</servlet-name>
+        <url-pattern>/gitinput</url-pattern>
+    </servlet-mapping>
+</web-app>
